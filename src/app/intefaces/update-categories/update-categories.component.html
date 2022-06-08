@@ -1,0 +1,31 @@
+<div class="row">
+    <div class="card col-md-6 offset-md-3 offset-md-3">
+        <div class="row">
+            <h3 class="text-center"> Mis à jour d'une catégorie </h3>
+            <hr />
+            <div class="card-body">
+                <form (ngSubmit)="onSubmit()">
+
+                    <div class="form-group">
+                        <label> Nom de la catégorie</label>
+                        <input type="text" class="form-control" id="nomcat" [(ngModel)]="categories.nomCat"
+                            name="nomcat">
+                    </div>
+
+                    <div class="form-group">
+                        <label> Quantité de la catégorie</label>
+                        <input type="text" class="form-control" id="qt" [(ngModel)]="categories.qtCat"
+                            name="qt">
+                    </div>
+
+                    
+                    <br />
+                    <button class="btn btn-success" type="submit" onsubmit="updateCategorie()">Submit</button>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div><div class = "container">
+    <router-outlet></router-outlet>
+  </div>

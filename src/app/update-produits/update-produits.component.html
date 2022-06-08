@@ -1,0 +1,36 @@
+<div class="row">
+    <div class="card col-md-6 offset-md-3 offset-md-3">
+        <div class="row">
+            <h3 class="text-center"> Mis à jour d'un produit </h3>
+            <hr />
+            <div class="card-body">
+                <form (ngSubmit)="onSubmit()">
+
+                    <div class="form-group">
+                        <label> nom du produit</label>
+                        <input type="text" class="form-control" id="nomcat" [(ngModel)]="produits.nom"
+                            name="nomcat">
+                    </div>
+
+                    <div class="form-group">
+                        <label> Quantité du produit</label>
+                        <input type="text" class="form-control" id="qt" [(ngModel)]="produits.qt"
+                            name="qt">
+                    </div>
+
+                    <div class="form-group">
+                        <label> Disponibilité</label>
+                        <input type="text" class="form-control" id="qt" [(ngModel)]="produits.disponible"
+                            name="qt">
+                    </div>
+
+                    <br />
+                    <button class="btn btn-success" type="submit" onsubmit="updateProduit()">Submit</button>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div><div class = "container">
+    <router-outlet></router-outlet>
+  </div>
